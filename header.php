@@ -30,7 +30,7 @@
 	
         <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'understrap' ); ?></a>
 
-        <nav class="navbar navbar-dark bg-inverse site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+        <nav class="navbar navbar-dark bg-custom site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
                             
 
                 <div class="container">
@@ -48,8 +48,7 @@
                                 </button>
 
                                 <!-- Your site title as branding in the menu -->
-                                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-
+                                <a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" /></a>
                             </div>
 
                             <!-- The WordPress Menu goes here -->
@@ -57,7 +56,7 @@
                                     array(
                                         'theme_location' => 'primary',
                                         'container_class' => 'collapse navbar-toggleable-xs exCollapsingNavbar',
-                                        'menu_class' => 'nav navbar-nav',
+                                        'menu_class' => 'nav nav-pills nav-stacked',
                                         'fallback_cb' => '',
                                         'menu_id' => 'main-menu',
                                         'walker' => new wp_bootstrap_navwalker()

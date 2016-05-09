@@ -37,5 +37,9 @@
     "gulp-cssnano": "^2.1.1",
     "merge2": "^1.0.1",
     "browser-sync": "^2.12.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0"
   }
 }

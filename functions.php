@@ -5,6 +5,41 @@
  * @package understrap
  */
 
+//Adobe Typkit
+function theme_typekit() {
+    wp_enqueue_script( 'theme_typekit', 'https://use.typekit.net/lpg8qlu.js');
+	}
+
+	add_action( 'wp_enqueue_scripts', 'theme_typekit' );
+
+function theme_typekit_inline() {
+  	if ( wp_script_is( 'theme_typekit', 'done' ) ) { ?>
+  	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<?php }
+}
+add_action('theme_typekit_inline', 'enqueue_font_awesome' );
+
+//Theme Support 
+add_theme_support( 'custom-header' );
+
+$defaults = array(
+	'default-image'          => '',
+	'width'                  => 0,
+	'height'                 => 0,
+	'flex-height'            => false,
+	'flex-width'             => false,
+	'uploads'                => true,
+	'random-default'         => false,
+	'header-text'            => true,
+	'default-text-color'     => '',
+	'wp-head-callback'       => '',
+	'admin-head-callback'    => '',
+	'admin-preview-callback' => '',
+);
+add_theme_support( 'custom-header', $defaults );
+
+
 /**
  * Theme setup and custom theme supports.
  */

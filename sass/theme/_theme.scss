@@ -1,1 +1,87 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+h1 {
+	font-family: $fatFrank;
+}
+
+h2, h3, h4 {
+	font-family: $aktiv;
+}
+
+
+.text-white {
+	color: $white;
+}
+.text-lightBlue {
+	color: $lightBlue;
+}
+.text-mediumBlue {
+	color: $mediumBlue;
+}
+.text-darlBlue {
+	color: $darkBlue;
+}
+.text-black {
+	color: $black;
+}
+.text-teal {
+	color: $teal;
+}
+.text-tan {
+	color: $teal;
+}
+.text-orang {
+	color: $orange;
+}
+.text-green {
+	color: $green;
+}
+.text-lightGray {
+	color: $lightGray;
+}
+.text-mediumGray {
+	color: $mediumGray;
+}
+.text-darkGray	{
+	color: $darkGray;
+}
+
+// NavBar
+.bg-custom {
+	color: $darkGray;
+	background-color: $lightGray;
+}	
+.navbar-dark .navbar-toggle {
+    border: 0px solid #fff;
+}
+.navbar-toggle {
+    position: relative;
+    float: right;
+    margin-right: 0;
+    padding: 13px 0px;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+}
+.navbar-dark .icon-bar {
+    border-bottom: 4px solid $darkGray;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 35px;
+    height: 2px;
+    border-radius: 1px;
+}
+.navbar-toggle .icon-bar+.icon-bar {
+    margin-top: 7px;
+}
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 35px;
+    height: 2px;
+    border-radius: 4px;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: $darkGray;
+}
+//Slider
+
