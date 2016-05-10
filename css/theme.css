@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/*********************
+BREAKPOINTS
+*********************/
 /*!
  * Bootstrap v4.0.0-alpha.2 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -7059,6 +7062,18 @@ h1 {
 h2, h3, h4 {
   font-family: "aktiv"; }
 
+p, h5 {
+  font-family: "garamound"; }
+
+h2, h5 {
+  font-size: 1.25em; }
+
+p {
+  font-size: 0.75em; }
+
+blockquote {
+  font-size: 1.25em; }
+
 .text-white {
   color: #ffffff; }
 
@@ -7095,9 +7110,50 @@ h2, h3, h4 {
 .text-darkGray {
   color: #3d484f; }
 
-.bg-custom {
-  color: #3d484f;
+.text-center {
+  text-align: center; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.bg-white {
+  background-color: #ffffff; }
+
+.bg-lightBlue {
+  background-color: #d9e8f5; }
+
+.bg-mediumBlue {
+  background-color: #91bed3; }
+
+.bg-darlBlue {
+  background-color: #304369; }
+
+.bg-black {
+  background-color: #231f20; }
+
+.bg-teal {
+  background-color: #2d8fb5; }
+
+.bg-tan {
+  background-color: #2d8fb5; }
+
+.bg-orang {
+  background-color: #b25b30; }
+
+.bg-green {
+  background-color: #75be38; }
+
+.bg-lightGray {
   background-color: #b2b4b8; }
+
+.bg-mediumGray {
+  background-color: #747b82; }
+
+.bg-darkGray {
+  background-color: #3d484f; }
 
 .navbar-dark .navbar-toggle {
   border: 0px solid #fff; }
@@ -7131,3 +7187,24 @@ h2, h3, h4 {
 
 .navbar-dark .navbar-nav .nav-link {
   color: #3d484f; }
+
+.entry-header {
+  display: none; }
+
+.line {
+  width: 35%;
+  border-bottom: solid 1px #747b82;
+  margin: 0 auto; }
+
+@media (min-width: 37.5em) {
+  .line {
+    width: 400px;
+    border-bottom: solid 4px #747b82;
+    margin: 0 auto; } }
+
+.space {
+  padding: 1.2em; }
+
+.remove-padding {
+  margin-right: -15px !important;
+  margin-left: -15px !important; }

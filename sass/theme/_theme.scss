@@ -6,8 +6,18 @@ h1 {
 h2, h3, h4 {
 	font-family: $aktiv;
 }
-
-
+p, h5 {
+	font-family: $garamound;
+}
+h2, h5 {
+	font-size: 1.25em;
+}
+p {
+	font-size: 0.75em;
+}
+blockquote {
+	font-size: 1.25em;
+}
 .text-white {
 	color: $white;
 }
@@ -44,12 +54,53 @@ h2, h3, h4 {
 .text-darkGray	{
 	color: $darkGray;
 }
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-right {
+	text-align: right;
+}
 
-// NavBar
-.bg-custom {
-	color: $darkGray;
+// Backgrounds
+.bg-white {
+	background-color: $white;
+}
+.bg-lightBlue {
+	background-color: $lightBlue;
+}
+.bg-mediumBlue {
+	background-color: $mediumBlue;
+}
+.bg-darlBlue {
+	background-color: $darkBlue;
+}
+.bg-black {
+	background-color: $black;
+}
+.bg-teal {
+	background-color: $teal;
+}
+.bg-tan {
+	background-color: $teal;
+}
+.bg-orang {
+	background-color: $orange;
+}
+.bg-green {
+	background-color: $green;
+}
+.bg-lightGray {
 	background-color: $lightGray;
-}	
+}
+.bg-mediumGray {
+	background-color: $mediumGray;
+}
+.bg-darkGray	{
+	background-color: $darkGray;
+}
 .navbar-dark .navbar-toggle {
     border: 0px solid #fff;
 }
@@ -83,5 +134,29 @@ h2, h3, h4 {
 .navbar-dark .navbar-nav .nav-link {
     color: $darkGray;
 }
-//Slider
 
+//Home Page
+.entry-header {
+	display: none;
+}
+
+//Page Attributes
+.line {
+	width: 35%;
+	border-bottom: solid 1px $mediumGray;
+	margin: 0 auto;
+}
+@include breakpoint(phablet) {
+		.line {
+			width: 400px;
+			border-bottom: solid 4px $mediumGray;
+			margin: 0 auto;
+		}
+}
+.space {
+	padding: 1.2em;
+}
+.remove-padding {
+	margin-right: -15px !important;
+	margin-left: -15px !important;
+}

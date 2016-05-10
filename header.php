@@ -30,7 +30,7 @@
 	
         <a class="skip-link screen-reader-text sr-only" href="#content"><?php _e( 'Skip to content', 'understrap' ); ?></a>
 
-        <nav class="navbar navbar-dark bg-custom site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+        <nav class="navbar navbar-dark bg-lightGray text-darkGray site-navigation" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
                             
 
                 <div class="container">
