@@ -4,6 +4,13 @@
  *
  * @package understrap
  */
+//Enqueue scripts and stylesheet
+function nwcpe_dep() {
+	wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css' );
+
+	wp_enqueue_scripts('main-js', 'js/main.js', false);
+}
+add_action('nwcpe_dep');
 
 //Adobe Typkit
 function theme_typekit() {

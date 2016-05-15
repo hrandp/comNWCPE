@@ -4634,13 +4634,13 @@ a.skip-link {
     margin-top: 4px; }
 
 .navbar-dark .navbar-toggle {
-  border: 1px solid #fff; }
+  border: 0px solid #fff; }
 
 .navbar-dark .icon-bar {
   border-bottom: 1px solid #fff; }
 
 .navbar-dark .dropdown-menu {
-  background-color: #373a3c; }
+  background-color: rgba(55, 58, 60, 0); }
 
 .navbar #main-menu {
   float: left; }
@@ -7057,19 +7057,37 @@ a.skip-link {
       background: #869791; }
 
 h1 {
-  font-family: "fatFrank"; }
+  font-family: "FatFrank", sans-serif; }
+
+h1 {
+  font-size: 1.5em; }
 
 h2, h3, h4 {
-  font-family: "aktiv"; }
+  font-family: "Aktiv", sans-serif; }
 
 p, h5 {
-  font-family: "garamound"; }
+  font-family: "Garamond", serif; }
 
 h2, h5 {
   font-size: 1.25em; }
 
+h3 {
+  font-size: 0.95em;
+  text-transform: uppercase; }
+
 p {
-  font-size: 0.75em; }
+  font-size: 0.85em; }
+
+@media (min-width: 64em) {
+  h1 {
+    font-size: 2em; }
+  h2, h5 {
+    font-size: 2.2em; }
+  h3 {
+    font-size: 1.1em;
+    font-weight: 700; }
+  p {
+    font-size: 1.1em; } }
 
 blockquote {
   font-size: 1.25em; }
@@ -7119,6 +7137,20 @@ blockquote {
 .text-right {
   text-align: right; }
 
+* {
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -o-transition: all .2s linear; }
+
+@media (min-width: 70em) {
+  .wrapper-border {
+    border: solid 5px #b2b4b8;
+    border-radius: 20px;
+    padding: 5em;
+    background: #fff;
+    margin-top: -135px; } }
+
 .bg-white {
   background-color: #ffffff; }
 
@@ -7155,6 +7187,77 @@ blockquote {
 .bg-darkGray {
   background-color: #3d484f; }
 
+a.btn-custom, a.btn-slider {
+  text-decoration: none;
+  font-family: "FatFrank", sans-serif;
+  font-size: 1.1em;
+  color: #b2b4b8;
+  width: 200px; }
+  a.btn-custom::hover, a.btn-custom::focus, a.btn-custom::active, a.btn-slider::hover, a.btn-slider::focus, a.btn-slider::active {
+    text-decoration: none; }
+
+a.btn-custom i {
+  display: block; }
+
+.btn-custom-border, a.btn-slider {
+  border: solid 2px #b2b4b8;
+  padding: 0.2em 1.2em 0.2em 1.2em;
+  border-radius: 10px;
+  width: 200px;
+  margin: 0 auto; }
+
+.btn-custom-border:hover,
+.btn-custom-border:focus {
+  background-color: #304369; }
+
+@media (min-width: 37.5em) {
+  nav.navbar.navbar-dark.nav-bg.text-darkGray.site-navigation {
+    position: absolute;
+    z-index: 999; } }
+
+@media (min-width: 50em) {
+  nav.navbar.navbar-dark.nav-bg.text-darkGray.site-navigation {
+    position: absolute;
+    z-index: 999; } }
+
+@media (min-width: 64em) {
+  nav.navbar.navbar-dark.nav-bg.text-darkGray.site-navigation {
+    position: absolute;
+    z-index: 999; } }
+
+a.btn-slider i {
+  padding-left: 5px;
+  vertical-align: middle; }
+
+a.btn-slider:hover, a.btn-slider:focus {
+  background-color: #2d8fb5;
+  color: #ffffff;
+  border: solid 2px #2d8fb5; }
+
+nav a {
+  color: #fff; }
+  nav a:hover, nav a:focus {
+    color: #b25b30; }
+
+ul.dropdown-menu {
+  left: 0px; }
+
+@media (min-width: 64em) {
+  ul.dropdown-menu {
+    left: 220px; } }
+
+.nav-pills .nav-link {
+  display: block;
+  padding: 0.1em 1em 0;
+  border-radius: .25rem; }
+
+.nav-pills .nav-item.open .nav-link, .nav-pills .nav-item.open .nav-link, .nav-pills .nav-item.open .nav-link:focus, .nav-pills .nav-item.open .nav-link:hover {
+  background-color: #304369;
+  width: 250px; }
+
+ul.dropdown-menu {
+  border: solid 0px; }
+
 .navbar-dark .navbar-toggle {
   border: 0px solid #fff; }
 
@@ -7188,8 +7291,36 @@ blockquote {
 .navbar-dark .navbar-nav .nav-link {
   color: #3d484f; }
 
+.nav-bg {
+  background-color: #b2b4b8; }
+
+@media (min-width: 37.5em) {
+  .nav-bg {
+    background-color: rgba(178, 180, 184, 0); } }
+
+@media (min-width: 50em) {
+  .nav-bg {
+    background-color: rgba(178, 180, 184, 0); } }
+
+@media (min-width: 64em) {
+  .nav-bg {
+    background-color: rgba(178, 180, 184, 0); } }
+
+.navbar-header {
+  margin-left: 25px; }
+
+p.slider-paragraph {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  margin-bottom: 1em;
+  display: block; }
+
 .entry-header {
   display: none; }
+
+@media (min-width: 64em) {
+  .home-quote {
+    background-color: rgba(178, 180, 184, 0); } }
 
 .line {
   width: 35%;
@@ -7208,3 +7339,10 @@ blockquote {
 .remove-padding {
   margin-right: -15px !important;
   margin-left: -15px !important; }
+
+.cta-height {
+  height: 50px; }
+
+@media (min-width: 37.5em) {
+  .cta-height {
+    height: 80px; } }
