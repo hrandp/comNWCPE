@@ -19,7 +19,7 @@ get_header(); ?>
 
     <div class="wrapper" id="wrapper-index">
         
-	   <div id="content" class="container">
+	   <div id="content" class="container-fluid">
 
             <div class="row">
            

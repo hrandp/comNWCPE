@@ -5,7 +5,7 @@ var BindUIActions = (function(){
 
 		this.bindUI = function(){
 			console.log('bindUI loading');
-
+			//Remove content Breakpoints
 			var isBreakPoint = function (bp) {
 				
 				var bps = [320, 480, 768, 1024],
@@ -31,6 +31,10 @@ var BindUIActions = (function(){
 				jQuery('.slider-sub-header, .slider-paragraph, .btn-slider' ).css('display', 'none');
 				console.log('Screen size is less than or equal to 1024');
 			}
+
+
+			//Upcoming Events Content Slider
+			
 		};
 	}
 

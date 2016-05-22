@@ -14,7 +14,7 @@ if ( function_exists( 'soliloquy' ) ) { soliloquy( '1533', 'slug' ); }
 ?>
 <div class="wrapper" id="page-wrapper">
     
-    <div  id="content" class="container">
+    <div  id="content" class="container-fluid">
         
 	   <div id="primary" class="col-md-12 content-area">
 

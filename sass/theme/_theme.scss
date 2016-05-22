@@ -96,11 +96,14 @@ blockquote {
 // }
 @include breakpoint(desktop) {
 		.wrapper-border {
-			border: solid 5px $lightGray;
-			border-radius: 20px;
-			padding: 5em;
-			background: #fff;
-			margin-top: -135px;
+			border: 5px solid #b2b4b8;
+		    border-radius: 20px;
+		    padding: 5em;
+		    background: #fff;
+		    margin-top: -135px;
+		    margin-bottom: -135px;
+		    z-index: 1;
+		    position: relative;
 		}
 }
 // Backgrounds
@@ -330,24 +333,39 @@ p.slider-paragraph{
 }
 
 //Page Attributes
-.line {
+.line-gray {
 	width: 35%;
 	border-bottom: solid 1px $mediumGray;
 	margin: 0 auto;
 }
+.line-white {
+	width: 35%;
+	border-bottom: solid 1px $white;
+	margin: -20px auto;
+}
 @include breakpoint(phablet) {
-		.line {
+		.line-gray {
 			width: 400px;
 			border-bottom: solid 4px $mediumGray;
 			margin: 0 auto;
 		}
+		.line-white {
+			width: 400px;
+			border-bottom: solid 4px $white;
+			margin: 0 auto;
+		}
 }
 .space {
-	padding: 1.2em;
+	padding-top: 1.2em;
+	padding-bottom: 1.2em;
 }
-.remove-padding {
+.margin-0 {
 	margin-right: -15px !important;
 	margin-left: -15px !important;
+}
+.padding-0 {
+	padding-left: 0px;
+	padding-right: 0px;
 }
 .cta-height {
 	height: 50px;
@@ -357,3 +375,43 @@ p.slider-paragraph{
 			height: 80px;
 		}
 }
+@include breakpoint(phablet){
+	.cta-title {
+		height: 30px; 
+	}
+}
+@include breakpoint(phablet){
+	.color-divider {
+		width: 104%
+	}
+}
+.img-divider {
+	min-width: 108%;
+	height: auto;
+}
+@include breakpoint(phablet){
+	.img-divider {
+		min-width: 102%;
+		height: auto;
+	}
+}
+.img-divider.img-responsive {
+	margin: 0 auto;
+}
+.full-width-div {
+    width: 102%;
+    left: -15px;
+    right: -15px;
+}
+.text-overlay {
+    position: absolute;
+    top: 6%;
+    z-index: 999;
+    margin: 0 auto;
+}
+// .text-overlay {
+//     position: absolute;
+//     top: 50%;
+//     z-index: 999;
+//     margin: 0 auto;
+// }

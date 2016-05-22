@@ -7145,11 +7145,14 @@ blockquote {
 
 @media (min-width: 70em) {
   .wrapper-border {
-    border: solid 5px #b2b4b8;
+    border: 5px solid #b2b4b8;
     border-radius: 20px;
     padding: 5em;
     background: #fff;
-    margin-top: -135px; } }
+    margin-top: -135px;
+    margin-bottom: -135px;
+    z-index: 1;
+    position: relative; } }
 
 .bg-white {
   background-color: #ffffff; }
@@ -7322,23 +7325,37 @@ p.slider-paragraph {
   .home-quote {
     background-color: rgba(178, 180, 184, 0); } }
 
-.line {
+.line-gray {
   width: 35%;
   border-bottom: solid 1px #747b82;
   margin: 0 auto; }
 
+.line-white {
+  width: 35%;
+  border-bottom: solid 1px #ffffff;
+  margin: -20px auto; }
+
 @media (min-width: 37.5em) {
-  .line {
+  .line-gray {
     width: 400px;
     border-bottom: solid 4px #747b82;
+    margin: 0 auto; }
+  .line-white {
+    width: 400px;
+    border-bottom: solid 4px #ffffff;
     margin: 0 auto; } }
 
 .space {
-  padding: 1.2em; }
+  padding-top: 1.2em;
+  padding-bottom: 1.2em; }
 
-.remove-padding {
+.margin-0 {
   margin-right: -15px !important;
   margin-left: -15px !important; }
+
+.padding-0 {
+  padding-left: 0px;
+  padding-right: 0px; }
 
 .cta-height {
   height: 50px; }
@@ -7346,3 +7363,34 @@ p.slider-paragraph {
 @media (min-width: 37.5em) {
   .cta-height {
     height: 80px; } }
+
+@media (min-width: 37.5em) {
+  .cta-title {
+    height: 30px; } }
+
+@media (min-width: 37.5em) {
+  .color-divider {
+    width: 104%; } }
+
+.img-divider {
+  min-width: 108%;
+  height: auto; }
+
+@media (min-width: 37.5em) {
+  .img-divider {
+    min-width: 102%;
+    height: auto; } }
+
+.img-divider.img-responsive {
+  margin: 0 auto; }
+
+.full-width-div {
+  width: 102%;
+  left: -15px;
+  right: -15px; }
+
+.text-overlay {
+  position: absolute;
+  top: 6%;
+  z-index: 999;
+  margin: 0 auto; }
