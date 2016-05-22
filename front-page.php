@@ -35,6 +35,25 @@ if ( function_exists( 'soliloquy' ) ) { soliloquy( '1533', 'slug' ); }
 
                 <?php endwhile; // end of the loop. ?>
 
+        <div class="wrapper-border hidden-xs hidden-sm">
+            <div class="row">
+                <?php $temp_query = $wp_query; ?>
+
+                    <?php query_posts('showposts=1'); ?>
+
+                        <?php while (have_posts()) : the_post(); ?>
+                        <div class="col-md-3">
+                            <?php the_post_thumbnail('front-page-post-thumbnail'); ?>
+                        </div>
+                        <div class="col-md-9 bg-darkGray">
+                            <div class="post" id="post-<?php the_ID(); ?>">
+                                <h3 class="text-white"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h4>
+                                <p class="text-white"><?php the_excerpt(); ?></p>
+                            </div>
+                        </div>
+                        <?php endwhile; ?>
+            </div>
+        </div>                
             </main><!-- #main -->
            
 	    </div><!-- #primary -->
