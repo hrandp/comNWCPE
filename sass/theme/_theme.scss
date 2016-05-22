@@ -5,8 +5,11 @@ h1 {
 h1 {
 	font-size: 1.5em;
 }
-h2, h3, h4 {
+h2, h4 {
 	font-family: $aktiv;
+}
+h3 {
+	font-family: $adelleSans;
 }
 p, h5 {
 	font-family: $garamound;
@@ -15,26 +18,26 @@ h2, h5 {
 	font-size: 1.25em;
 }
 h3 {
-	font-size: 0.95em;
+	font-size: 0.85em;
 	text-transform: uppercase;
 }
 p {
 	font-size: 0.85em;
 }
 @include breakpoint(laptop) {
-		h1 {
-			font-size: 2em;
-		}
-		h2, h5 {
-			font-size: 2.2em;
-		}
-		h3 {
-			font-size: 1.1em;
-			font-weight: 700;
-		}
-		p {
-			font-size: 1.1em;
-		}
+	h1 {
+		font-size: 3em;
+	}
+	h2, h5 {
+		font-size: 2.2em;
+	}
+	h3 {
+		font-size: 1.5em;
+		font-weight: 700;
+	}
+	p {
+		font-size: 1.5em;
+	}
 }
 blockquote {
 	font-size: 1.25em;
@@ -90,18 +93,17 @@ blockquote {
     -moz-transition: all .2s linear;
     -o-transition: all .2s linear;
 }
-//wrapper
-// .wrapper-border {
-
-// }
+.title-padding {
+	padding-bottom: 0.2em !important;
+}
 @include breakpoint(desktop) {
 		.wrapper-border {
 			border: 5px solid #b2b4b8;
 		    border-radius: 20px;
 		    padding: 5em;
 		    background: #fff;
-		    margin-top: -135px;
-		    margin-bottom: -135px;
+		    margin-top: -100px;
+		    margin-bottom: -100px;
 		    z-index: 1;
 		    position: relative;
 		}
@@ -116,7 +118,7 @@ blockquote {
 .bg-mediumBlue {
 	background-color: $mediumBlue;
 }
-.bg-darlBlue {
+.bg-darkBlue {
 	background-color: $darkBlue;
 }
 .bg-black {
@@ -143,36 +145,94 @@ blockquote {
 .bg-darkGray	{
 	background-color: $darkGray;
 }
+@include breakpoint(mobileonly){
+	.hidden-xs {
+		display: none;
+	}
+}
+@include breakpoint(phablet){
+	.hidden-sm {
+		display: none;
+	}
+}
+@include breakpoint(tablet){
+	.hidden-md {
+		display: none;
+	}
+}
+@include breakpoint(desktop){
+	.hidden-xs,
+	.hidden-sm,
+	.hidden-md {
+		display: block;
+	}
+	.hidden-lg {
+		display: none;
+	}
+}
+
 //buttons
-a.btn-custom, a.btn-slider {
+a.btn-custom-blue,
+a.btn-custom-white,
+a.btn-slider {
+	width: 200px;
 	text-decoration: none;
 	font-family: $fatFrank;
 	font-size: 1.1em;
-	color: $lightGray;
-	width: 200px;
-	&::hover,
-	&::focus,
-	&::active {
+	&:hover,
+	&:focus,
+	&:active {
 		text-decoration: none;
 	}
 }
-a.btn-custom {
+a.btn-custom-white, 
+a.btn-custom-blue {
 	i {
 		display: block;
 	}
 }
+a.btn-custom-white {
+	color: $white;
 
-.btn-custom-border, a.btn-slider {
-	border: solid 2px $lightGray;
+	&:hover,
+	&:focus {
+		color: $darkBlue;
+	}
+}
+a.btn-custom-blue,
+a.btn-slider {
+	color: $lightGray;
+}
+.btn-slider {
+	i {
+		padding-left: 0.5em;
+	}
+}
+.btn-custom-border-gray,
+.btn-custom-border-white {
 	padding: 0.2em 1.2em 0.2em 1.2em;
 	border-radius: 10px;
 	width: 200px;
 	margin: 0 auto;	
 }
-.btn-custom-border:hover,
-.btn-custom-border:focus {
-	background-color: $darkBlue;
+
+.btn-custom-border-gray {
+	border: solid 2px $lightGray;
+
+	&:hover,
+	&:focus {
+		background-color: $darkBlue;
+	}
 }
+.btn-custom-border-white {
+	border: solid 2px $white;
+
+	&:hover,
+	&:focus {
+		background-color: $white;
+	}
+}
+
 @include breakpoint(phablet){
 	nav.navbar.navbar-dark.nav-bg.text-darkGray.site-navigation {
 		position: absolute;
@@ -189,20 +249,6 @@ a.btn-custom {
 	nav.navbar.navbar-dark.nav-bg.text-darkGray.site-navigation {
 		position: absolute;
 		z-index: 999;
-	}
-}
- 
-
-a.btn-slider {
-	i {
-		padding-left: 5px;
-		vertical-align: middle;
-	}
-	&:hover,
-	&:focus {
-		background-color: $teal;
-		color: $white;
-		border: solid 2px $teal;
 	}
 }
 //navigation
@@ -333,31 +379,62 @@ p.slider-paragraph{
 }
 
 //Page Attributes
-.line-gray {
+.line-gray,
+.line-white,
+.line-blue {
 	width: 35%;
-	border-bottom: solid 1px $mediumGray;
+	border-bottom: solid 1px;
 	margin: 0 auto;
 }
+.line-gray {
+	border-bottom-color: $mediumGray;
+}
 .line-white {
-	width: 35%;
-	border-bottom: solid 1px $white;
-	margin: -20px auto;
+	border-bottom-color: $white;
+}
+.line-blue {
+	border-bottom-color: $darkBlue;
 }
 @include breakpoint(phablet) {
-		.line-gray {
+		.line-gray,
+		.line-white,
+		.line-blue {
 			width: 400px;
-			border-bottom: solid 4px $mediumGray;
+			border-bottom: solid 4px;
 			margin: 0 auto;
+		}
+		.line-gray {
+			border-bottom-color: $mediumGray;
 		}
 		.line-white {
-			width: 400px;
-			border-bottom: solid 4px $white;
-			margin: 0 auto;
+			border-bottom-color: $white;
+		}
+		.line-blue {
+			border-bottom-color: $darkBlue;
 		}
 }
+.space-lg {
+	padding-bottom: 4em;
+}
 .space {
-	padding-top: 1.2em;
-	padding-bottom: 1.2em;
+	padding-top: 0em;
+	padding-bottom: 2em;
+}
+.space-small {
+	padding: 1.1em 0 2px 0;
+}
+.space-x-small {
+	padding: 0.05em 0 0 0;
+}
+
+@include breakpoint(desktop){
+	.space {
+		padding-top: 1.2em;
+		padding-bottom: 1.2em;
+	}
+	.space-x-small {
+	    padding: .5em 0 1.5em;
+	}
 }
 .margin-0 {
 	margin-right: -15px !important;
@@ -367,12 +444,15 @@ p.slider-paragraph{
 	padding-left: 0px;
 	padding-right: 0px;
 }
+.padding-text {
+	padding: 1.2em;
+}
 .cta-height {
 	height: 50px;
 }
 @include breakpoint(phablet) {
 		.cta-height {
-			height: 80px;
+			height: 120px;
 		}
 }
 @include breakpoint(phablet){
@@ -391,7 +471,19 @@ p.slider-paragraph{
 }
 @include breakpoint(phablet){
 	.img-divider {
-		min-width: 102%;
+		min-width: 104%;
+		height: auto;
+	}
+}
+@include breakpoint(tablet){
+	.img-divider {
+		min-width: 104%;
+		height: auto;
+	}
+}
+@include breakpoint(laptop){
+	.img-divider {
+		min-width: 101.65%;
 		height: auto;
 	}
 }
@@ -399,19 +491,20 @@ p.slider-paragraph{
 	margin: 0 auto;
 }
 .full-width-div {
-    width: 102%;
+    // width: 102%;
     left: -15px;
     right: -15px;
 }
 .text-overlay {
     position: absolute;
-    top: 6%;
-    z-index: 999;
+    top: 0;
     margin: 0 auto;
+    right: 0;
+    z-index: 999;
+    padding: 3em 10px 5px 25px;
 }
-// .text-overlay {
-//     position: absolute;
-//     top: 50%;
-//     z-index: 999;
-//     margin: 0 auto;
-// }
+@include breakpoint(desktop){
+	.text-overlay {
+		padding: 6.5em 1.2em 0 3em;
+	}
+}
