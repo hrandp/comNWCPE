@@ -31,16 +31,21 @@ var BindUIActions = (function(){
 				jQuery('.slider-sub-header, .slider-paragraph, .btn-slider' ).css('display', 'none');
 				console.log('Screen size is less than or equal to 1024');
 			}
-
-
-			//Upcoming Events Content Slider
 			
-		};
-	}
+		}
+
+		this.removeLineBlogSnippet = function(){
+				jQuery("div > .line-gray-full-width").last().css("display", "none");
+			
+				return 
+			}
+	};
 
 	return BindUIActions;
 
 })(window);
 
+
 var bindUI = new BindUIActions();
 bindUI.bindUI();
+bindUI.removeLineBlogSnippet();

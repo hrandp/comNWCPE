@@ -30,6 +30,14 @@ add_action('theme_typekit_inline', 'enqueue_font_awesome' );
 //Theme Support 
 add_theme_support( 'custom-header' );
 
+//Blog excerpt
+add_filter( 'get_the_content_more_link', 'modify_read_more_link_text' );
+
+function modify_read_more_link_text() {
+    return '... <a class="btn-custom-white more-link" href="' . get_permalink() . '">[Read The Entire Article]</a>';
+}
+
+
 $defaults = array(
 	'default-image'          => '',
 	'width'                  => 0,

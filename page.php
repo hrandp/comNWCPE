@@ -14,7 +14,7 @@ get_header(); ?>
 
 <div class="wrapper" id="page-wrapper">
     
-    <div  id="content" class="container">
+    <div  id="content" class="container-fluid">
 
         <div class="row">
         
@@ -34,6 +34,8 @@ get_header(); ?>
                         ?>
 
                     <?php endwhile; // end of the loop. ?>
+
+
 
                 </main><!-- #main -->
                

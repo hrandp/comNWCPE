@@ -7068,7 +7068,7 @@ h2, h4 {
 h3 {
   font-family: "AdelleSans", serif; }
 
-p, h5 {
+p, h5, li {
   font-family: "Garamond", serif; }
 
 h2, h5 {
@@ -7078,8 +7078,11 @@ h3 {
   font-size: 0.85em;
   text-transform: uppercase; }
 
-p {
+p, li {
   font-size: 0.85em; }
+
+.text-garamound {
+  font-family: "Garamond", serif; }
 
 @media (min-width: 64em) {
   h1 {
@@ -7089,7 +7092,8 @@ p {
   h3 {
     font-size: 1.5em;
     font-weight: 700; }
-  p {
+  p,
+  li {
     font-size: 1.5em; } }
 
 blockquote {
@@ -7140,6 +7144,9 @@ blockquote {
 .text-right {
   text-align: right; }
 
+.text-decoration {
+  font-weight: 800; }
+
 * {
   transition: all .2s linear;
   -webkit-transition: all .2s linear;
@@ -7148,6 +7155,11 @@ blockquote {
 
 .title-padding {
   padding-bottom: 0.2em !important; }
+
+@media (min-width: 64em) {
+  .no-padding {
+    padding-right: -0.9375;
+    padding-left: -0.9375; } }
 
 @media (min-width: 70em) {
   .wrapper-border {
@@ -7159,6 +7171,22 @@ blockquote {
     margin-bottom: -100px;
     z-index: 1;
     position: relative; } }
+
+.img-thumbnail-custom {
+  float: left; }
+
+.no-padding {
+  padding: 0; }
+
+a.permalink-custom {
+  text-decoration: none; }
+  a.permalink-custom:hover, a.permalink-custom:focus {
+    text-decoration: none;
+    color: #b2b4b8; }
+
+@media (min-width: 64em) {
+  .blog-excerpt-bg-height {
+    height: 360px; } }
 
 .bg-white {
   background-color: #ffffff; }
@@ -7219,7 +7247,15 @@ blockquote {
 a.btn-custom-blue,
 a.btn-custom-white,
 a.btn-slider {
-  width: 200px;
+  width: 200px; }
+
+a.btn-custom-blue-lg {
+  width: 300px; }
+
+a.btn-custom-blue,
+a.btn-custom-white,
+a.btn-slider,
+a.btn-custom-blue-lg {
   text-decoration: none;
   font-family: "FatFrank", sans-serif;
   font-size: 1.1em; }
@@ -7229,7 +7265,10 @@ a.btn-slider {
   a.btn-custom-white:active,
   a.btn-slider:hover,
   a.btn-slider:focus,
-  a.btn-slider:active {
+  a.btn-slider:active,
+  a.btn-custom-blue-lg:hover,
+  a.btn-custom-blue-lg:focus,
+  a.btn-custom-blue-lg:active {
     text-decoration: none; }
 
 a.btn-custom-white i,
@@ -7242,7 +7281,8 @@ a.btn-custom-white {
     color: #304369; }
 
 a.btn-custom-blue,
-a.btn-slider {
+a.btn-slider,
+a.btn-custom-blue-lg {
   color: #b2b4b8; }
 
 .btn-slider i {
@@ -7250,14 +7290,24 @@ a.btn-slider {
 
 .btn-custom-border-gray,
 .btn-custom-border-white {
+  width: 200px; }
+
+.btn-custom-border-gray-lg {
+  width: 240px; }
+
+.btn-custom-border-gray,
+.btn-custom-border-white,
+.btn-custom-border-gray-lg {
   padding: 0.2em 1.2em 0.2em 1.2em;
   border-radius: 10px;
-  width: 200px;
   margin: 0 auto; }
 
-.btn-custom-border-gray {
+.btn-custom-border-gray,
+.btn-custom-border-gray-lg {
   border: solid 2px #b2b4b8; }
-  .btn-custom-border-gray:hover, .btn-custom-border-gray:focus {
+  .btn-custom-border-gray:hover, .btn-custom-border-gray:focus,
+  .btn-custom-border-gray-lg:hover,
+  .btn-custom-border-gray-lg:focus {
     background-color: #304369; }
 
 .btn-custom-border-white {
@@ -7371,11 +7421,22 @@ p.slider-paragraph {
 .line-gray,
 .line-white,
 .line-blue {
-  width: 35%;
+  width: 35%; }
+
+.line-gray-small {
+  width: 10%; }
+
+.line-gray,
+.line-white,
+.line-blue,
+.line-gray-small,
+.line-gray-full-width {
   border-bottom: solid 1px;
   margin: 0 auto; }
 
-.line-gray {
+.line-gray,
+.line-gray-small,
+.line-gray-full-width {
   border-bottom-color: #747b82; }
 
 .line-white {
@@ -7388,22 +7449,42 @@ p.slider-paragraph {
   .line-gray,
   .line-white,
   .line-blue {
-    width: 400px;
+    width: 400px; }
+  .line-gray-small {
+    width: 100px; }
+  .line-gray-full-width {
+    width: 80%; }
+  .line-gray,
+  .line-white,
+  .line-blue,
+  .line-gray-small {
     border-bottom: solid 4px;
+    margin: 0 auto; }
+  .line-gray-full-width {
+    border-bottom: solid 2px;
     margin: 0 auto; }
   .line-gray {
     border-bottom-color: #747b82; }
   .line-white {
     border-bottom-color: #ffffff; }
   .line-blue {
-    border-bottom-color: #304369; } }
+    border-bottom-color: #304369; }
+  .line-gray-full-width {
+    border-bottom-color: #b2b4b8; } }
 
 .space-lg {
   padding-bottom: 4em; }
 
+.space-lg-top {
+  padding-top: 2em;
+  padding-bottom: 2em; }
+
 .space {
   padding-top: 0em;
   padding-bottom: 2em; }
+
+.space-medium {
+  padding: 0.5em 0 1em 0; }
 
 .space-small {
   padding: 1.1em 0 2px 0; }
