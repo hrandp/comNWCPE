@@ -68,11 +68,11 @@ if ( function_exists( 'soliloquy' ) ) { soliloquy( '1533', 'slug' ); }
                         
                         <div class="row">
 
-                            <div class="col-md-3 bg-darkGray no-padding">
-                                <span class="img-thumbnail-custom z-1"><?php the_post_thumbnail('front-page-post-thumbnail'); ?></span>
+                            <div class="col-md-3 bg-darkGray no-padding blog-snippet-container">
+                                <span class="img-thumbnail-custom"><?php the_post_thumbnail('front-page-post-thumbnail'); ?></span>
                             </div>
                             
-                            <div class="col-md-9 bg-darkGray padding-text blog-excerpt-bg-height z-n-1">
+                            <div class="col-md-9 padding-text-blog-snippet blog-excerpt-bg-height blog-snippet-info">
                                 <div class="post" id="post-<?php the_ID(); ?>">
                                     <h4 class="text-white text-serif"><a class="text-white permalink-custom" href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h4>
                                     <span class="text-lightGray text-garamound"><?php the_time(get_option('date_format')) ?></span>

@@ -27,6 +27,64 @@ p, li {
 .text-garamound {
 	font-family: $garamound;
 }
+.z-1 {
+	z-index: 1;
+}
+.z-999 {
+	z-index: 999;
+}
+.z-n-1 {
+	z-index: -1;
+}
+
+.blog-snippet-container {
+	position: absolute;
+	width: 291px;
+	height: auto;
+}
+@include breakpoint(laptop){
+	.blog-snippet-container {
+		width: 90%;
+	}
+	
+}
+@include breakpoint(desktop){
+	.blog-snippet-container {
+		width: 92%;
+	}
+	
+}
+@include breakpoint (tablet){
+	.blog-snippet-container {
+		width: 100%;
+	}
+}
+@include breakpoint (phablet){
+	.blog-snippet-container {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.blog-snippet-info {
+	width: 290px;
+	height: 290px;
+	top: 0;
+	left: 0;
+}
+@include breakpoint(phablet){
+	.blog-snippet-info {
+		width: 45%;
+		height: auto;
+		float: right;
+		padding-top: 3em;
+	}
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
 @include breakpoint(laptop) {
 	h1 {
 		font-size: 3em;
@@ -125,6 +183,10 @@ blockquote {
 //Blog
 .img-thumbnail-custom {
 	float: left;
+
+	img {
+		height: auto;
+	}
 }
 .no-padding {
 	padding: 0;
@@ -138,10 +200,21 @@ a.permalink-custom {
 		color: $lightGray;
 	}
 }
+@include breakpoint(phablet){
+	.blog-excerpt-bg-height {
+		height: 360px;
+	}
+}
 
 @include breakpoint(laptop){
 	.blog-excerpt-bg-height {
 		height: 360px;
+		width: 75%;
+	}
+}
+@include breakpoint(tablet){
+	.blog-excerpt-bg-height {
+		width: 60%;
 	}
 }
 // Backgrounds
@@ -182,6 +255,11 @@ a.permalink-custom {
 	background-color: $darkGray;
 }
 @include breakpoint(mobileonly){
+	.bg-darkGray {
+		background-color: rgba($darkGray, 0);
+	}
+}
+@include breakpoint(mobileonly){
 	.hidden-xs {
 		display: none;
 	}
@@ -210,7 +288,8 @@ a.permalink-custom {
 //buttons
 a.btn-custom-blue,
 a.btn-custom-white,
-a.btn-slider {
+a.btn-slider,
+a.btn-secondary {
 	width: 200px;
 }
 a.btn-custom-blue-lg {
@@ -219,10 +298,10 @@ a.btn-custom-blue-lg {
 a.btn-custom-blue,
 a.btn-custom-white,
 a.btn-slider,
-a.btn-custom-blue-lg {
+a.btn-custom-blue-lg,
+a.btn-secondary {
 	text-decoration: none;
 	font-family: $fatFrank;
-	font-size: 1.1em;
 	&:hover,
 	&:focus,
 	&:active {
@@ -246,7 +325,8 @@ a.btn-custom-white {
 }
 a.btn-custom-blue,
 a.btn-slider,
-a.btn-custom-blue-lg {
+a.btn-custom-blue-lg,
+a.btn-secondary {
 	color: $lightGray;
 }
 .btn-slider {
@@ -391,37 +471,12 @@ ul.dropdown-menu {
 .navbar-header{
 	margin-left: 25px;
 }
-
-//slider 
-// h1.slider-header {
-// 	display: block;
-// }
-// h2.slider-sub-header{
-// 	display: block;
-// }
 p.slider-paragraph{
 	font-size: 1.5em;
 	line-height: 1.2em;
 	margin-bottom: 1em;
 	display: block;
 }
-// .slider-sub-header,
-// .slider-paragraph {
-// 	display: block;
-// }
-
-// @include breakpoint(phablet){
-// 	.slider-sub-header,
-// 	.slider-paragraph {
-// 		display: none;
-// 	}
-// }
-// @include breakpoint(tablet){
-// 	.slider-sub-header,
-// 	.slider-paragraph {
-// 		display: none;
-// 	}
-// }
 //Home Page
 .entry-header {
 	display: none;
@@ -460,6 +515,9 @@ p.slider-paragraph{
 .line-blue {
 	border-bottom-color: $darkBlue;
 }
+.line-gray-full-width {
+	display: none;
+}
 @include breakpoint(phablet) {
 		.line-gray,
 		.line-white,
@@ -494,14 +552,22 @@ p.slider-paragraph{
 		}
 		.line-gray-full-width {
 			border-bottom-color: $lightGray;
+			display: block;
 		}
 }
 .space-lg {
 	padding-bottom: 4em;
 }
 .space-lg-top {
-	padding-top: 2em;
-	padding-bottom: 2em;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+@include breakpoint(phablet){
+	.space-lg-top {
+		padding-top: 2em;
+		padding-bottom: 2em;
+		display: block;
+	}
 }
 .space {
 	padding-top: 0em;
@@ -534,8 +600,14 @@ p.slider-paragraph{
 	padding-left: 0px;
 	padding-right: 0px;
 }
-.padding-text {
+.padding-text-blog-snippet {
 	padding: 1.2em;
+}
+@include breakpoint(phablet){
+	.padding-text-blog-snippet {
+		padding: 3em 1.2em 3em;
+	}
+
 }
 .cta-height {
 	height: 50px;
