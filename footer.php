@@ -22,10 +22,10 @@
                         <div class="col-md-4 text-center">
                             <h3 class="text-white">Register for email newsletter</h3>
                             <p class="text-lightGray">Stay in the loop with both new thought leadership trends and future courses.</p>
-                            <div class="space-small"></div>
+                            
                             <?php echo do_shortcode( '[contact-form-7 id="1881" title="footer" class="footer-email-gen"]' ); ?>
                         </div>
-                        <div class="space visible-xs"></div>
+                      
                         <div class="col-md-4 text-center">
                             <h3 class="text-white">Follow Social Media</h3>
                             <p class="text-lightGray">Follow us on social media as a way to stay connected to our daily updates.</p>
@@ -36,7 +36,7 @@
                                 <li><a href="http://www.slideshare.net/SteveZagarola"><img src="<?php echo get_template_directory_uri(); ?>/img/nwcpe-icon-slide-share.png" alt="SlideShare NWCPE"></a></li>
                             </ul>
                         </div>
-                        <div class="space visible-xs"></div>
+                        
                         <div class="col-md-4 text-center">
                             <h3 class="text-white">CONTACT US FOR EXPERT ADVICE:</h3>
                             <p class="text-lightGray">Get in touch to discuss how you can improve performance excellence for yourself or for your company</p>
@@ -54,7 +54,29 @@
         </div><!-- container end -->
         
     </div><!-- wrapper end -->
+   
+   <div class="wrapper-subfooter">
+       <div class="container-fluid">
+           <div class="row">
+               <div class="col-sm-3 text-center">
+                   <img src="<?php echo get_template_directory_uri(); ?>/img/nwcpe-logo-85x180.png" alt="Google+ NWCPE">
+               </div>
+               
+               <div class="col-md-9 hidden-xs">
+                   <?php wp_nav_menu( array( 'menu' => 'menu-footer', 'theme_location' => 'secondary' ) ); ?>
+                    
+               </div>
+<div class="space-lg-top-footer hidden-xs"><div class="line-gray-full-width-footer"></div></div>
+               <div class="col-md-8 col-md-offset-2">
+                   <p class="text-center">Copyright © NWCPE. All rights reserved.</p>
+               </div>
 
+               <div class="col-md-2 text-center website-credit">
+                   <p>Website by <a href="http://www.dannielrolfe.com">DR Consulting</a></p>
+               </div>
+           </div>
+       </div>
+   </div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

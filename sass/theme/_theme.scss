@@ -56,6 +56,9 @@ p, li {
 		font-size: 1.2em;
 	}
 }
+.home h2.entry-title {
+	display: none;
+}
 .text-garamound {
 	font-family: $garamound;
 }
@@ -102,6 +105,7 @@ p, li {
 	height: 290px;
 	top: 0;
 	left: 0;
+	padding: 1.2em;
 }
 @include breakpoint(phablet){
 	.blog-snippet-info {
@@ -195,15 +199,21 @@ blockquote {
 	}
 }
 @include breakpoint(desktop) {
-		.wrapper-border {
+		.wrapper-border,
+		.wrapper-border-child-page {
 			border: 5px solid #b2b4b8;
 		    border-radius: 20px;
 		    padding: 5em;
 		    background: #fff;
-		    margin-top: -100px;
 		    margin-bottom: -100px;
 		    z-index: 1;
 		    position: relative;
+		}
+		.wrapper-border {
+			margin-top: -100px;
+		}
+		.wrapper-border-child-page {
+		    margin-top: -200px;
 		}
 }
 //Blog
@@ -241,7 +251,13 @@ a.permalink-custom {
 @include breakpoint(laptop){
 	.blog-excerpt-bg-height {
 		height: 360px;
-		width: 75%;
+		width: 60%;
+	}
+}
+@include breakpoint(desktop){
+	.blog-excerpt-bg-height {
+		height: 360px;
+		width: 65%;
 	}
 }
 @include breakpoint(tablet){
@@ -398,7 +414,20 @@ a.btn-secondary {
 		background-color: $white;
 	}
 }
-
+.navbar-brand {
+	img {
+		height: 50px;
+		width: auto;
+	}
+}
+@include breakpoint(laptop){
+	.navbar-brand {
+		img {
+			height: 100%;
+			width: auto;
+		}
+	}
+}
 @include breakpoint(phablet){
 	nav.navbar.navbar-dark.nav-bg.text-darkGray.site-navigation {
 		position: absolute;
@@ -532,13 +561,15 @@ p.slider-paragraph{
 .line-white,
 .line-blue,
 .line-gray-small,
-.line-gray-full-width {
+.line-gray-full-width,
+.line-gray-full-width-footer {
 	border-bottom: solid 1px;
 	margin: 0 auto;
 }
 .line-gray,
 .line-gray-small,
-.line-gray-full-width {
+.line-gray-full-width,
+.line-gray-full-width-footer {
 	border-bottom-color: $mediumGray;
 }
 .line-white {
@@ -562,6 +593,9 @@ p.slider-paragraph{
 		.line-gray-full-width {
 			width: 80%;
 		}
+		.line-gray-full-width-footer {
+			width: 60%;
+		}
 		.line-gray,
 		.line-white,
 		.line-blue,
@@ -569,7 +603,8 @@ p.slider-paragraph{
 			border-bottom: solid 4px;
 			margin: 0 auto;
 		}
-		.line-gray-full-width {
+		.line-gray-full-width,
+		.line-gray-full-width-footer {
 			border-bottom: solid 2px;
 			margin: 0 auto;
 		}
@@ -600,6 +635,9 @@ p.slider-paragraph{
 		padding-bottom: 2em;
 		display: block;
 	}
+}
+.space-lg-top-footer {
+	padding-top: 4em;
 }
 .space {
 	padding-top: 0em;
@@ -714,12 +752,18 @@ p.slider-paragraph{
 }
 //footer 
 #wrapper-footer {
-	background-image: url("../img/nwcpe-footer.jpg");
+	background-image: url("../img/nwcpe-footer-two.jpg");
 	background-size: 100% auto;
 }
 .wrapper-border-footer {
-	margin-top: -100px;
-	padding-top: 15em;
+	margin-top: 0px;
+	padding-top: 1.2em;
+}
+@include breakpoint(laptop){
+	.wrapper-border-footer {
+		margin-top: -100px;
+		padding-top: 15em;
+	}
 }
 .footer-cooler {
 	background-color: rgba($darkGray, 0.9);
@@ -743,6 +787,7 @@ footer {
 		margin: 0 auto;
 		text-align: center;
 		padding-left: 0;
+		padding-bottom: 1.5em;
 		
 	}
 
@@ -752,8 +797,14 @@ footer {
 		float: none;
 	}
 }
+
 .footer-lead-gen {
-	width: 225px;
+	width: 150px;
+}
+@include breakpoint(laptop){
+	.footer-lead-gen {
+		width: 225px;
+	}
 }
 button.btn.btn-large.btn-primary {
 	background-color: $darkGray !important;
@@ -764,9 +815,113 @@ button.btn.btn-large.btn-primary {
 		background-color: $teal;
 	}
 }
-.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors,
+.wpcf7-response-output.wpcf7-display-none.wpcf7-mail-sent-ok {
 	color: $teal;
 	border: solid 3px $teal;
 	border-radius: 5px;
 }
+.wrapper-subfooter {
+	padding: 0.5em 0 1em;
+}
+#menu-menu-footer {
+	ul {
+		border-bottom: solid 2px $darkGray;
+	}
 
+	li {
+		padding: 0 0.5em 1.2em 0.5em;
+		color: $darkGray;
+	}
+
+	a {
+		color: $darkGray;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: $orange;
+		}
+	}
+}
+.website-credit {
+	p {
+	font-size: 0.85em;
+	color: $mediumGray;
+	}
+
+		a {
+		color: $mediumGray;
+
+		&:hover,
+		&:focus {
+			color: $orange;
+			text-decoration: none;
+		} 
+	}
+}
+//child-pages
+.child-page-header-container {
+	height: 200px;
+	overflow: hidden;
+	z-index: -1;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+@include breakpoint(laptop){
+	.child-page-header-container {
+	height: 396px;
+	overflow: hidden;
+	z-index: -1;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+#wrapper-header {
+	background-image: url("../img/nwcpe-child-header-two.jpg");
+	background-size: 100% auto;
+	display: block;
+	height: 100px;
+}
+@include breakpoint(phablet){
+	#wrapper-header {
+		height: 300px;
+	}
+}
+@include breakpoint(laptop){
+	#wrapper-header {
+		background-image: url("../img/nwcpe-child-header-two.jpg");
+		background-size: 100% auto;
+		display: block;
+		height: 400px;
+	}
+}
+.entry-header {
+	text-align: center;
+	color: $teal;
+	top: -80px;
+	position: relative;
+	display: block;
+
+}
+@include breakpoint(phablet){
+	.entry-header {
+		text-align: right;
+	}
+}
+@include breakpoint(laptop){
+	.entry-header {
+		text-align: right;
+		color: $teal;
+		top: -350px;
+		position: relative;
+		display: block;
+
+	}
+}
