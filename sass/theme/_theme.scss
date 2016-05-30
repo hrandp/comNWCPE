@@ -24,6 +24,38 @@ h3 {
 p, li {
 	font-size: 0.85em;
 }
+@include breakpoint(phablet) {
+	h1 {
+		font-size: 1.75em;
+	}
+	h2, h5 {
+		font-size: 1.5em;
+	}
+	h3 {
+		font-size: 1em;
+		font-weight: 700;
+	}
+	p,
+	li {
+		font-size: 1.2em;
+	}
+}
+@include breakpoint(laptop) {
+	h1 {
+		font-size: 2.5em;
+	}
+	h2, h5 {
+		font-size: 2.2em;
+	}
+	h3 {
+		font-size: 1.5em;
+		font-weight: 700;
+	}
+	p,
+	li {
+		font-size: 1.2em;
+	}
+}
 .text-garamound {
 	font-family: $garamound;
 }
@@ -42,30 +74,29 @@ p, li {
 	width: 291px;
 	height: auto;
 }
-@include breakpoint(laptop){
-	.blog-snippet-container {
-		width: 90%;
-	}
-	
-}
-@include breakpoint(desktop){
-	.blog-snippet-container {
-		width: 92%;
-	}
-	
-}
-@include breakpoint (tablet){
-	.blog-snippet-container {
-		width: 100%;
-	}
-}
 @include breakpoint (phablet){
 	.blog-snippet-container {
 		width: 100%;
 		height: auto;
 	}
 }
-
+@include breakpoint(laptop){
+	.blog-snippet-container {
+		width: 90%;
+	}
+	
+}
+@include breakpoint (tablet){
+	.blog-snippet-container {
+		width: 90%;
+	}
+}
+@include breakpoint(desktop){
+	.blog-snippet-container {
+		width: 90%;
+	}
+	
+}
 .blog-snippet-info {
 	width: 290px;
 	height: 290px;
@@ -85,22 +116,7 @@ p, li {
     margin: 0 auto;
 }
 
-@include breakpoint(laptop) {
-	h1 {
-		font-size: 3em;
-	}
-	h2, h5 {
-		font-size: 2.2em;
-	}
-	h3 {
-		font-size: 1.5em;
-		font-weight: 700;
-	}
-	p,
-	li {
-		font-size: 1.5em;
-	}
-}
+
 blockquote {
 	font-size: 1.25em;
 }
@@ -162,6 +178,16 @@ blockquote {
 .title-padding {
 	padding-bottom: 0.2em !important;
 }
+@include breakpoint(phablet){
+	.title-padding {
+		padding-bottom: 1.75em !important;
+	}
+}
+@include breakpoint(tablet){
+	.title-padding {
+		padding-bottom: 0em !important;
+	}
+}
 @include breakpoint(laptop){
 	.no-padding {
 		padding-right: -0.9375;
@@ -206,6 +232,12 @@ a.permalink-custom {
 	}
 }
 
+@include breakpoint(tablet){
+	.blog-excerpt-bg-height {
+		width: 60%;
+	}
+}
+
 @include breakpoint(laptop){
 	.blog-excerpt-bg-height {
 		height: 360px;
@@ -214,7 +246,7 @@ a.permalink-custom {
 }
 @include breakpoint(tablet){
 	.blog-excerpt-bg-height {
-		width: 60%;
+		background-color: $darkGray;
 	}
 }
 // Backgrounds
@@ -571,7 +603,12 @@ p.slider-paragraph{
 }
 .space {
 	padding-top: 0em;
-	padding-bottom: 2em;
+	padding-bottom: 1em;
+}
+@include breakpoint(laptop){
+	.space {
+		padding-bottom: 2em;
+	}
 }
 .space-medium {
 	padding: 0.5em 0 1em 0;
@@ -600,11 +637,11 @@ p.slider-paragraph{
 	padding-left: 0px;
 	padding-right: 0px;
 }
-.padding-text-blog-snippet {
+.padding-text {
 	padding: 1.2em;
 }
 @include breakpoint(phablet){
-	.padding-text-blog-snippet {
+	.padding-text {
 		padding: 3em 1.2em 3em;
 	}
 
@@ -665,8 +702,71 @@ p.slider-paragraph{
     z-index: 999;
     padding: 3em 10px 5px 25px;
 }
-@include breakpoint(desktop){
+@include breakpoint(phablet){
 	.text-overlay {
-		padding: 6.5em 1.2em 0 3em;
+		padding: 1.2em 10px 5px 25px;
 	}
 }
+@include breakpoint(desktop){
+	.text-overlay {
+		padding: 6.5em 1.2em 0 3em
+	}
+}
+//footer 
+#wrapper-footer {
+	background-image: url("../img/nwcpe-footer.jpg");
+	background-size: 100% auto;
+}
+.wrapper-border-footer {
+	margin-top: -100px;
+	padding-top: 15em;
+}
+.footer-cooler {
+	background-color: rgba($darkGray, 0.9);
+	z-index: 2;
+	height: 100%;
+}
+footer {
+	a {
+		text-decoration: none;
+		color: $lightGray;
+
+		&:hover,
+		&:focus {
+			color: $teal;
+			text-decoration: none;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0 auto;
+		text-align: center;
+		padding-left: 0;
+		
+	}
+
+	li {
+		display: inline-block;
+		padding: 0 0.5em 0 0.5em;
+		float: none;
+	}
+}
+.footer-lead-gen {
+	width: 225px;
+}
+button.btn.btn-large.btn-primary {
+	background-color: $darkGray !important;
+	border-color: $darkGray !important;
+
+	&:hover,
+	&:focus {
+		background-color: $teal;
+	}
+}
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
+	color: $teal;
+	border: solid 3px $teal;
+	border-radius: 5px;
+}
+

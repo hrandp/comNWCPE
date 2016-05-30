@@ -91,7 +91,7 @@ if ( function_exists( 'soliloquy' ) ) { soliloquy( '1533', 'slug' ); }
                     <div class="row text-center">
                         <h3 class="text-darkGray">Learn more about Lean and Six Sigma from these insights and publications</h3>
                         <div class="space"></div>
-                        <a href="#" class="btn-custom-blue-lg"><div class="btn-custom-border-gray-lg">Insights &amp; Publications<i class="fa fa-chevron-down" aria-hidden="true"></i></div></a> 
+                        <a href="<?php bloginfo('url'); ?>/blog" class="btn-custom-blue-lg"><div class="btn-custom-border-gray-lg">Insights &amp; Publications<i class="fa fa-chevron-down" aria-hidden="true"></i></div></a> 
                     </div>
 
         </div><!-- /.wrapper-border -->                

@@ -9,32 +9,51 @@
 ?>
 
 <?php get_template_part('widget-templates/footerfull'); ?>
-
-<div class="wrapper" id="wrapper-footer">
-    
-    <div class="container">
-
-        <div class="row">
-
-            <div class="col-md-12">
-    
-                <footer id="colophon" class="site-footer" role="contentinfo">
-
-                    <div class="site-info">
-                        <a href="<?php echo esc_url( __( 'http://wordpress.org/', 'understrap' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'understrap' ), 'WordPress' ); ?></a>
-                        <span class="sep"> | </span>
-                        <?php printf( __( 'Theme: %1$s by %2$s.', 'understrap' ), 'understrap', '<a href="http://understrap.com/" rel="designer">understrap.com</a>' ); ?>
-                    </div><!-- .site-info -->
-
-                </footer><!-- #colophon -->
-
-            </div><!--col end -->
-
-        </div><!-- row end -->
+    <div class="wrapper wrapper-border-footer" id="wrapper-footer">
         
-    </div><!-- container end -->
-    
-</div><!-- wrapper end -->
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-12">
+        
+                    <footer id="colophon" class="site-footer" role="contentinfo">
+                    
+                        <div class="col-md-4 text-center">
+                            <h3 class="text-white">Register for email newsletter</h3>
+                            <p class="text-lightGray">Stay in the loop with both new thought leadership trends and future courses.</p>
+                            <div class="space-small"></div>
+                            <?php echo do_shortcode( '[contact-form-7 id="1881" title="footer" class="footer-email-gen"]' ); ?>
+                        </div>
+                        <div class="space visible-xs"></div>
+                        <div class="col-md-4 text-center">
+                            <h3 class="text-white">Follow Social Media</h3>
+                            <p class="text-lightGray">Follow us on social media as a way to stay connected to our daily updates.</p>
+                            <div class="space-small"></div>
+                            <ul class="footer-social-icons">
+                                <li><a href="https://www.linkedin.com/company/3630432?trk=tyah&trkInfo=clickedVertical%3Acompany%2CclickedEntityId%3A3630432%2Cidx%3A1-1-1%2CtarId%3A1464569302853%2Ctas%3ANWCPE"><img src="<?php echo get_template_directory_uri(); ?>/img/nwcpe-icon-linkedin-in.png" alt="LinkedIn NWCPE"></a></li>
+                                <li><a href="https://plus.google.com/+NwcpeConsulting/posts"><img src="<?php echo get_template_directory_uri(); ?>/img/nwcpe-icon-google-plus.png" alt="Google+ NWCPE"></a></li>
+                                <li><a href="http://www.slideshare.net/SteveZagarola"><img src="<?php echo get_template_directory_uri(); ?>/img/nwcpe-icon-slide-share.png" alt="SlideShare NWCPE"></a></li>
+                            </ul>
+                        </div>
+                        <div class="space visible-xs"></div>
+                        <div class="col-md-4 text-center">
+                            <h3 class="text-white">CONTACT US FOR EXPERT ADVICE:</h3>
+                            <p class="text-lightGray">Get in touch to discuss how you can improve performance excellence for yourself or for your company</p>
+                            <div class="space-small"></div>
+                            <p class="text-lightGray"><i class="fa fa-phone" aria-hidden="true"> <a href="tel://1-503-477-6738">1 (503) 477-6738</a></i></p>
+                            <p class="text-lightGray"><i class="fa fa-envelope" aria-hidden="true"></i> <a href="mailto:info@nwcpe.com"> info@nwcpe.com</a></p>
+                        </div>
+
+                    </footer><!-- #colophon -->
+
+                </div><!--col end -->
+
+            </div><!-- row end -->
+            
+        </div><!-- container end -->
+        
+    </div><!-- wrapper end -->
 
 </div><!-- #page -->
 

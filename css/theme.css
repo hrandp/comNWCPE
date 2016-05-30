@@ -7081,6 +7081,30 @@ h3 {
 p, li {
   font-size: 0.85em; }
 
+@media (min-width: 37.5em) {
+  h1 {
+    font-size: 1.75em; }
+  h2, h5 {
+    font-size: 1.5em; }
+  h3 {
+    font-size: 1em;
+    font-weight: 700; }
+  p,
+  li {
+    font-size: 1.2em; } }
+
+@media (min-width: 64em) {
+  h1 {
+    font-size: 2.5em; }
+  h2, h5 {
+    font-size: 2.2em; }
+  h3 {
+    font-size: 1.5em;
+    font-weight: 700; }
+  p,
+  li {
+    font-size: 1.2em; } }
+
 .text-garamound {
   font-family: "Garamond", serif; }
 
@@ -7098,22 +7122,22 @@ p, li {
   width: 291px;
   height: auto; }
 
+@media (min-width: 37.5em) {
+  .blog-snippet-container {
+    width: 100%;
+    height: auto; } }
+
 @media (min-width: 64em) {
+  .blog-snippet-container {
+    width: 90%; } }
+
+@media (min-width: 50em) {
   .blog-snippet-container {
     width: 90%; } }
 
 @media (min-width: 70em) {
   .blog-snippet-container {
-    width: 92%; } }
-
-@media (min-width: 50em) {
-  .blog-snippet-container {
-    width: 100%; } }
-
-@media (min-width: 37.5em) {
-  .blog-snippet-container {
-    width: 100%;
-    height: auto; } }
+    width: 90%; } }
 
 .blog-snippet-info {
   width: 290px;
@@ -7131,18 +7155,6 @@ p, li {
 .col-centered {
   float: none;
   margin: 0 auto; }
-
-@media (min-width: 64em) {
-  h1 {
-    font-size: 3em; }
-  h2, h5 {
-    font-size: 2.2em; }
-  h3 {
-    font-size: 1.5em;
-    font-weight: 700; }
-  p,
-  li {
-    font-size: 1.5em; } }
 
 blockquote {
   font-size: 1.25em; }
@@ -7204,6 +7216,14 @@ blockquote {
 .title-padding {
   padding-bottom: 0.2em !important; }
 
+@media (min-width: 37.5em) {
+  .title-padding {
+    padding-bottom: 1.75em !important; } }
+
+@media (min-width: 50em) {
+  .title-padding {
+    padding-bottom: 0em !important; } }
+
 @media (min-width: 64em) {
   .no-padding {
     padding-right: -0.9375;
@@ -7238,6 +7258,10 @@ a.permalink-custom {
   .blog-excerpt-bg-height {
     height: 360px; } }
 
+@media (min-width: 50em) {
+  .blog-excerpt-bg-height {
+    width: 60%; } }
+
 @media (min-width: 64em) {
   .blog-excerpt-bg-height {
     height: 360px;
@@ -7245,7 +7269,7 @@ a.permalink-custom {
 
 @media (min-width: 50em) {
   .blog-excerpt-bg-height {
-    width: 60%; } }
+    background-color: #3d484f; } }
 
 .bg-white {
   background-color: #ffffff; }
@@ -7559,7 +7583,11 @@ p.slider-paragraph {
 
 .space {
   padding-top: 0em;
-  padding-bottom: 2em; }
+  padding-bottom: 1em; }
+
+@media (min-width: 64em) {
+  .space {
+    padding-bottom: 2em; } }
 
 .space-medium {
   padding: 0.5em 0 1em 0; }
@@ -7585,11 +7613,11 @@ p.slider-paragraph {
   padding-left: 0px;
   padding-right: 0px; }
 
-.padding-text-blog-snippet {
+.padding-text {
   padding: 1.2em; }
 
 @media (min-width: 37.5em) {
-  .padding-text-blog-snippet {
+  .padding-text {
     padding: 3em 1.2em 3em; } }
 
 .cta-height {
@@ -7641,6 +7669,55 @@ p.slider-paragraph {
   z-index: 999;
   padding: 3em 10px 5px 25px; }
 
+@media (min-width: 37.5em) {
+  .text-overlay {
+    padding: 1.2em 10px 5px 25px; } }
+
 @media (min-width: 70em) {
   .text-overlay {
     padding: 6.5em 1.2em 0 3em; } }
+
+#wrapper-footer {
+  background-image: url("../img/nwcpe-footer.jpg");
+  background-size: 100% auto; }
+
+.wrapper-border-footer {
+  margin-top: -100px;
+  padding-top: 15em; }
+
+.footer-cooler {
+  background-color: rgba(61, 72, 79, 0.9);
+  z-index: 2;
+  height: 100%; }
+
+footer a {
+  text-decoration: none;
+  color: #b2b4b8; }
+  footer a:hover, footer a:focus {
+    color: #2d8fb5;
+    text-decoration: none; }
+
+footer ul {
+  list-style-type: none;
+  margin: 0 auto;
+  text-align: center;
+  padding-left: 0; }
+
+footer li {
+  display: inline-block;
+  padding: 0 0.5em 0 0.5em;
+  float: none; }
+
+.footer-lead-gen {
+  width: 225px; }
+
+button.btn.btn-large.btn-primary {
+  background-color: #3d484f !important;
+  border-color: #3d484f !important; }
+  button.btn.btn-large.btn-primary:hover, button.btn.btn-large.btn-primary:focus {
+    background-color: #2d8fb5; }
+
+.wpcf7-response-output.wpcf7-display-none.wpcf7-validation-errors {
+  color: #2d8fb5;
+  border: solid 3px #2d8fb5;
+  border-radius: 5px; }
