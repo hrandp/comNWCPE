@@ -24,6 +24,14 @@ h3 {
 p, li {
 	font-size: 0.85em;
 }
+a {
+	color: $teal;
+
+	&:hover,
+	&:focus {
+		color: $darkGray;
+	}
+}
 @include breakpoint(phablet) {
 	h1 {
 		font-size: 1.75em;
@@ -71,7 +79,17 @@ p, li {
 .z-n-1 {
 	z-index: -1;
 }
+ul.unstyled {
+	list-style: none;
 
+	i {
+	    font-size: 0.75em;
+	    vertical-align: middle;
+	}
+}
+ul.inline-block {
+	display: inline-block;
+}
 .blog-snippet-container {
 	position: absolute;
 	width: 291px;
@@ -560,17 +578,21 @@ p.slider-paragraph{
 .line-gray,
 .line-white,
 .line-blue,
-.line-gray-small,
 .line-gray-full-width,
 .line-gray-full-width-footer {
 	border-bottom: solid 1px;
 	margin: 0 auto;
 }
+.line-gray-small {
+	border-bottom: solid 0.5px;
+}
 .line-gray,
-.line-gray-small,
 .line-gray-full-width,
 .line-gray-full-width-footer {
 	border-bottom-color: $mediumGray;
+}
+.line-gray-small {
+	border-bottom-color: $lightGray;
 }
 .line-white {
 	border-bottom-color: $white;
@@ -598,7 +620,10 @@ p.slider-paragraph{
 		}
 		.line-gray,
 		.line-white,
-		.line-blue,
+		.line-blue {
+			border-bottom: solid 4px;
+			margin: 0 auto;
+		}
 		.line-gray-small {
 			border-bottom: solid 4px;
 			margin: 0 auto;
@@ -620,6 +645,9 @@ p.slider-paragraph{
 		.line-gray-full-width {
 			border-bottom-color: $lightGray;
 			display: block;
+		}
+		.line-gray-small {
+			border-color: $lightGray;
 		}
 }
 .space-lg {

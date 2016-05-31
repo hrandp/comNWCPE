@@ -7081,6 +7081,11 @@ h3 {
 p, li {
   font-size: 0.85em; }
 
+a {
+  color: #2d8fb5; }
+  a:hover, a:focus {
+    color: #3d484f; }
+
 @media (min-width: 37.5em) {
   h1 {
     font-size: 1.75em; }
@@ -7119,6 +7124,15 @@ p, li {
 
 .z-n-1 {
   z-index: -1; }
+
+ul.unstyled {
+  list-style: none; }
+  ul.unstyled i {
+    font-size: 0.75em;
+    vertical-align: middle; }
+
+ul.inline-block {
+  display: inline-block; }
 
 .blog-snippet-container {
   position: absolute;
@@ -7543,17 +7557,21 @@ p.slider-paragraph {
 .line-gray,
 .line-white,
 .line-blue,
-.line-gray-small,
 .line-gray-full-width,
 .line-gray-full-width-footer {
   border-bottom: solid 1px;
   margin: 0 auto; }
 
+.line-gray-small {
+  border-bottom: solid 0.5px; }
+
 .line-gray,
-.line-gray-small,
 .line-gray-full-width,
 .line-gray-full-width-footer {
   border-bottom-color: #747b82; }
+
+.line-gray-small {
+  border-bottom-color: #b2b4b8; }
 
 .line-white {
   border-bottom-color: #ffffff; }
@@ -7577,7 +7595,9 @@ p.slider-paragraph {
     width: 60%; }
   .line-gray,
   .line-white,
-  .line-blue,
+  .line-blue {
+    border-bottom: solid 4px;
+    margin: 0 auto; }
   .line-gray-small {
     border-bottom: solid 4px;
     margin: 0 auto; }
@@ -7593,7 +7613,9 @@ p.slider-paragraph {
     border-bottom-color: #304369; }
   .line-gray-full-width {
     border-bottom-color: #b2b4b8;
-    display: block; } }
+    display: block; }
+  .line-gray-small {
+    border-color: #b2b4b8; } }
 
 .space-lg {
   padding-bottom: 4em; }
