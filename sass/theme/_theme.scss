@@ -29,7 +29,8 @@ a {
 
 	&:hover,
 	&:focus {
-		color: $darkGray;
+		color: $orange;
+		text-decoration: none;
 	}
 }
 @include breakpoint(phablet) {

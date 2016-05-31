@@ -7084,7 +7084,8 @@ p, li {
 a {
   color: #2d8fb5; }
   a:hover, a:focus {
-    color: #3d484f; }
+    color: #b25b30;
+    text-decoration: none; }
 
 @media (min-width: 37.5em) {
   h1 {
