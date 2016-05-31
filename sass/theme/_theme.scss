@@ -65,7 +65,7 @@ a {
 		font-size: 1.2em;
 	}
 }
-.home h2.entry-title {
+.home h1.entry-title {
 	display: none;
 }
 .text-garamound {
@@ -916,7 +916,7 @@ button.btn.btn-large.btn-primary {
 	background-image: url("../img/nwcpe-child-header-two.jpg");
 	background-size: 100% auto;
 	display: block;
-	height: 100px;
+	height: 150px;
 }
 @include breakpoint(phablet){
 	#wrapper-header {
@@ -928,13 +928,13 @@ button.btn.btn-large.btn-primary {
 		background-image: url("../img/nwcpe-child-header-two.jpg");
 		background-size: 100% auto;
 		display: block;
-		height: 400px;
+		height: 450px;
 	}
 }
 .entry-header {
 	text-align: center;
 	color: $teal;
-	top: -80px;
+	top: -138px;
 	position: relative;
 	display: block;
 
@@ -942,13 +942,15 @@ button.btn.btn-large.btn-primary {
 @include breakpoint(phablet){
 	.entry-header {
 		text-align: right;
+		width: 70%;
+		float: right;
 	}
 }
 @include breakpoint(laptop){
 	.entry-header {
 		text-align: right;
 		color: $teal;
-		top: -350px;
+		top: -160px;
 		position: relative;
 		display: block;
 

@@ -7111,7 +7111,7 @@ a {
   li {
     font-size: 1.2em; } }
 
-.home h2.entry-title {
+.home h1.entry-title {
   display: none; }
 
 .text-garamound {
@@ -7833,7 +7833,7 @@ button.btn.btn-large.btn-primary {
   background-image: url("../img/nwcpe-child-header-two.jpg");
   background-size: 100% auto;
   display: block;
-  height: 100px; }
+  height: 150px; }
 
 @media (min-width: 37.5em) {
   #wrapper-header {
@@ -7844,23 +7844,25 @@ button.btn.btn-large.btn-primary {
     background-image: url("../img/nwcpe-child-header-two.jpg");
     background-size: 100% auto;
     display: block;
-    height: 400px; } }
+    height: 450px; } }
 
 .entry-header {
   text-align: center;
   color: #2d8fb5;
-  top: -80px;
+  top: -138px;
   position: relative;
   display: block; }
 
 @media (min-width: 37.5em) {
   .entry-header {
-    text-align: right; } }
+    text-align: right;
+    width: 70%;
+    float: right; } }
 
 @media (min-width: 64em) {
   .entry-header {
     text-align: right;
     color: #2d8fb5;
-    top: -350px;
+    top: -160px;
     position: relative;
     display: block; } }
