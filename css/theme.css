@@ -7068,7 +7068,7 @@ h2, h4 {
 h3 {
   font-family: "AdelleSans", serif; }
 
-p, h5, li {
+p, h5, h6, li {
   font-family: "Garamond", serif; }
 
 h2, h5 {
@@ -7077,6 +7077,9 @@ h2, h5 {
 h3 {
   font-size: 0.85em;
   text-transform: uppercase; }
+
+h6 {
+  font-size: 1.25em; }
 
 p, li {
   font-size: 0.85em; }
@@ -7199,7 +7202,7 @@ blockquote {
 .text-tan {
   color: #2d8fb5; }
 
-.text-orang {
+.text-orange {
   color: #b25b30; }
 
 .text-green {
@@ -7408,8 +7411,11 @@ a.btn-secondary {
 .btn-slider i {
   padding-left: 0.5em; }
 
-.btn-custom-border-gray,
-.btn-custom-border-white {
+.btn-add-to-cart,
+.btn-view-cart {
+  width: 150px; }
+
+.btn-custom-border-gray {
   width: 200px; }
 
 .btn-custom-border-gray-lg {
@@ -7417,7 +7423,9 @@ a.btn-secondary {
 
 .btn-custom-border-gray,
 .btn-custom-border-white,
-.btn-custom-border-gray-lg {
+.btn-custom-border-gray-lg,
+.btn-add-to-cart,
+.btn-view-cart {
   padding: 0.2em 1.2em 0.2em 1.2em;
   border-radius: 10px;
   margin: 0 auto; }
@@ -7434,6 +7442,40 @@ a.btn-secondary {
   border: solid 2px #ffffff; }
   .btn-custom-border-white:hover, .btn-custom-border-white:focus {
     background-color: #ffffff; }
+
+.btn-add-to-cart,
+.btn-view-cart {
+  color: #ffffff;
+  background-color: #2d8fb5;
+  border: solid 4px #2d8fb5;
+  text-align: center; }
+
+.btn-view-cart {
+  float: right;
+  top: 10px;
+  right: 10px;
+  position: relative;
+  z-index: 2; }
+  .btn-view-cart:hover, .btn-view-cart:focus {
+    background-color: #ffffff;
+    color: #2d8fb5;
+    border: solid 4px #2d8fb5; }
+
+@media (min-width: 70em) {
+  .btn-view-cart {
+    top: 321px;
+    right: 55px;
+    position: relative;
+    z-index: 2; }
+  .btn-add-to-cart,
+  .btn-view-cart {
+    color: #ffffff; }
+    .btn-add-to-cart:hover, .btn-add-to-cart:focus,
+    .btn-view-cart:hover,
+    .btn-view-cart:focus {
+      background-color: #ffffff;
+      color: #2d8fb5;
+      border: solid 4px #2d8fb5; } }
 
 .navbar-brand img {
   height: 50px;
@@ -7830,26 +7872,35 @@ button.btn.btn-large.btn-primary {
       height: auto; } }
 
 #wrapper-header {
+  height: 150px; }
+
+#wrapper-header-workshop {
+  height: 200px; }
+
+#wrapper-header,
+#wrapper-header-workshop {
   background-image: url("../img/nwcpe-child-header-two.jpg");
   background-size: 100% auto;
-  display: block;
-  height: 150px; }
+  display: block; }
 
 @media (min-width: 37.5em) {
   #wrapper-header {
-    height: 300px; } }
+    height: 300px; }
+  #wrapper-header-workshop {
+    height: 275px; } }
 
 @media (min-width: 64em) {
   #wrapper-header {
-    background-image: url("../img/nwcpe-child-header-two.jpg");
-    background-size: 100% auto;
-    display: block;
-    height: 450px; } }
+    height: 450px; }
+  #wrapper-header-workshop {
+    height: 454px; } }
+
+.entry-header {
+  top: -138px; }
 
 .entry-header {
   text-align: center;
   color: #2d8fb5;
-  top: -138px;
   position: relative;
   display: block; }
 

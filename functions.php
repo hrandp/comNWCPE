@@ -37,6 +37,7 @@ function modify_read_more_link_text() {
     return '... <a class="btn-custom-white more-link" href="' . get_permalink() . '">[Read The Entire Article]</a>';
 }
 
+add_filter( 'wp_title', 'wc_custom_shop_archive_title' );
 
 $defaults = array(
 	'default-image'          => '',
@@ -54,6 +55,23 @@ $defaults = array(
 );
 add_theme_support( 'custom-header', $defaults );
 
+//Woocommerce 
+function redirect_to_checkout() {
+    return WC()->cart->get_checkout_url();
+}
+/**
+ * Change the Shop archive page title.
+ * @param  string $title
+ * @return string
+ */
+function wc_custom_shop_archive_title( $title ) {
+    if ( is_shop() ) {
+        return str_replace( __( 'Products', 'woocommerce' ), 'Workshops', $title );
+    }
+
+    return $title;
+}
+add_filter( 'wp_title', 'wc_custom_shop_archive_title' );
 
 /**
  * Theme setup and custom theme supports.

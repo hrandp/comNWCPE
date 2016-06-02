@@ -6,13 +6,16 @@
  */
 
 get_header(); ?>
+<div class="child-page-header-container" id="wrapper-header">
+</div>
 <div class="wrapper" id="single-wrapper">
     
     <div  id="content" class="container-fluid">
 
+    <div class="wrapper-border">
         <div class="row">
         
-            <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-8<?php else : ?>col-md-12<?php endif; ?> content-area">
+            <div id="primary" class="<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>col-md-12<?php else : ?>col-md-12<?php endif; ?> content-area">
                 
                 <main id="main" class="site-main" role="main">
 
@@ -34,13 +37,13 @@ get_header(); ?>
                 </main><!-- #main -->
                 
             </div><!-- #primary -->
-        
-        <?php get_template_part('sidebar'); ?>
 
         </div><!-- .row -->
-        
+
+       </div><!-- /.wrapper-border --> 
+
     </div><!-- Container end -->
-    
+   
 </div><!-- Wrapper end -->
 
 <?php get_footer(); ?>

@@ -1,23 +1,23 @@
 <?php
 /**
- * The template for displaying all pages.
+ * Template Name: Workshops Page
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
+ * Template for displaying a page without sidebar even if a sidebar widget is published
  *
  * @package understrap
  */
 
 get_header(); ?>
-<div class="child-page-header-container" id="wrapper-header">
+<div class="child-page-header-container" id="wrapper-header-workshop">
+    <!-- <a  class="btn-view-cart" href='/cart/'>View Cart</a> -->
+    <a class="cart-contents btn-view-cart" href="<?php echo WC()->cart->get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><?php echo sprintf (_n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> <br>View Cart</a>
+
 </div>
 <div class="wrapper" id="page-wrapper">
     
     <div  id="content" class="container-fluid">
         
-       <div id="primary" class="col-md-12 content-area">
+	   <div id="primary" class="col-md-12 content-area">
 
             <main id="main" class="site-main" role="main">
 
@@ -38,7 +38,7 @@ get_header(); ?>
 
             </main><!-- #main -->
            
-        </div><!-- #primary -->
+	    </div><!-- #primary -->
         
     </div><!-- Container end -->
     
