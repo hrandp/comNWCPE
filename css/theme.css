@@ -7510,7 +7510,7 @@ ul.dropdown-menu {
 
 @media (min-width: 64em) {
   ul.dropdown-menu {
-    left: 220px; } }
+    left: 270px; } }
 
 .nav-pills .nav-link {
   display: block;
@@ -7519,7 +7519,7 @@ ul.dropdown-menu {
 
 .nav-pills .nav-item.open .nav-link, .nav-pills .nav-item.open .nav-link, .nav-pills .nav-item.open .nav-link:focus, .nav-pills .nav-item.open .nav-link:hover {
   background-color: #304369;
-  width: 250px; }
+  width: 270px; }
 
 ul.dropdown-menu {
   border: solid 0px; }
@@ -7600,6 +7600,7 @@ p.slider-paragraph {
 .line-white,
 .line-blue,
 .line-gray-full-width,
+.line-gray-full-width-single,
 .line-gray-full-width-footer {
   border-bottom: solid 1px;
   margin: 0 auto; }
@@ -7916,3 +7917,20 @@ button.btn.btn-large.btn-primary {
     top: -160px;
     position: relative;
     display: block; } }
+
+@media (min-width: 64em) {
+  .consulting-services-wrapper {
+    height: 200px;
+    padding: 1.2em; }
+    .consulting-services-wrapper:hover, .consulting-services-wrapper:focus {
+      background-color: #3d484f;
+      border: solid 0 #304369;
+      border-radius: 10px;
+      color: #ffffff; } }
+
+.cta-icon {
+  height: 50px;
+  width: auto;
+  margin: 0 auto;
+  vertical-align: middle;
+  margin-bottom: 1.2em; }

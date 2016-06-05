@@ -527,7 +527,7 @@ ul.dropdown-menu {
 }
 @include breakpoint(laptop){
 	ul.dropdown-menu {
-		left: 220px;
+		left: 270px;
 	}
 }
 .nav-pills .nav-link {
@@ -537,7 +537,7 @@ ul.dropdown-menu {
 }
 .nav-pills .nav-item.open .nav-link,.nav-pills .nav-item.open .nav-link, .nav-pills .nav-item.open .nav-link:focus, .nav-pills .nav-item.open .nav-link:hover {
 	background-color: $darkBlue;
-	width: 250px;
+	width: 270px;
 }
 ul.dropdown-menu {
 	border: solid 0px;
@@ -625,6 +625,7 @@ p.slider-paragraph{
 .line-white,
 .line-blue,
 .line-gray-full-width,
+.line-gray-full-width-single,
 .line-gray-full-width-footer {
 	border-bottom: solid 1px;
 	margin: 0 auto;
@@ -1010,4 +1011,27 @@ button.btn.btn-large.btn-primary {
 		display: block;
 
 	}
+}
+
+@include breakpoint(laptop){
+	.consulting-services-wrapper {
+		height: 200px;
+		padding: 1.2em;
+
+		&:hover,
+		&:focus {
+			background-color: $darkGray;
+			border: solid 0 $darkBlue;
+			border-radius: 10px;
+			color: $white;
+		}
+	}
+}
+
+.cta-icon {
+	height: 50px;
+	width: auto;
+	margin: 0 auto;
+	vertical-align: middle;
+	margin-bottom: 1.2em;
 }

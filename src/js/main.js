@@ -37,8 +37,8 @@ var BindUIActions = (function(){
 		this.removeLineBlogSnippet = function(){
 				jQuery("div > .line-gray-full-width").last().css("display", "none");
 			
-				return 
-			}
+				// return 
+		}
 	};
 
 	return BindUIActions;
