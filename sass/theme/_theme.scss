@@ -387,11 +387,6 @@ a.btn-custom-blue {
 }
 a.btn-custom-white {
 	color: $white;
-
-	&:hover,
-	&:focus {
-		color: $darkBlue;
-	}
 }
 a.btn-custom-blue,
 a.btn-slider,
@@ -405,7 +400,8 @@ a.btn-secondary {
 	}
 }
 .btn-add-to-cart,
-.btn-view-cart {
+.btn-view-cart,
+.btn-custom-border-white {
 	width: 150px;
 }
 .btn-custom-border-gray {
@@ -438,8 +434,9 @@ a.btn-secondary {
 
 	&:hover,
 	&:focus {
-		background-color: $white;
+		background-color: $darkBlue;
 	}
+
 }
 .btn-add-to-cart,
 .btn-view-cart {

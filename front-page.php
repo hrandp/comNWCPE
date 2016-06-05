@@ -80,7 +80,7 @@ if ( function_exists( 'soliloquy' ) ) { soliloquy( '1533', 'slug' ); }
                                     
                                     <div class="space-small"></div>
 
-                                    <span class="text-white"><?php the_excerpt(2); ?></span>
+                                    <span class="text-white"><?php the_excerpt(); ?></span>
                                 </div>
                             </div>
                             
