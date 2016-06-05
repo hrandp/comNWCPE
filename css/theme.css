@@ -7296,7 +7296,7 @@ a.permalink-custom {
 @media (min-width: 70em) {
   .blog-excerpt-bg-height {
     height: 360px;
-    width: 65%; } }
+    width: 75%; } }
 
 @media (min-width: 50em) {
   .blog-excerpt-bg-height {
@@ -7601,7 +7601,8 @@ p.slider-paragraph {
 .line-blue,
 .line-gray-full-width,
 .line-gray-full-width-single,
-.line-gray-full-width-footer {
+.line-gray-full-width-footer,
+.line-gray-full-width-single-light {
   border-bottom: solid 1px;
   margin: 0 auto; }
 
@@ -7624,6 +7625,9 @@ p.slider-paragraph {
 
 .line-gray-full-width {
   display: none; }
+
+.line-gray-full-width-single-light {
+  border-bottom-color: #f4f5f5; }
 
 @media (min-width: 37.5em) {
   .line-gray,
@@ -7674,7 +7678,9 @@ p.slider-paragraph {
     display: block; } }
 
 .space-lg-top-footer {
-  padding-top: 4em; }
+  padding-top: 4em;
+  left: 10px;
+  position: relative; }
 
 .space {
   padding-top: 0em;
@@ -7891,7 +7897,7 @@ button.btn.btn-large.btn-primary {
 
 @media (min-width: 64em) {
   #wrapper-header {
-    height: 450px; }
+    height: 500px; }
   #wrapper-header-workshop {
     height: 454px; } }
 
@@ -7934,3 +7940,28 @@ button.btn.btn-large.btn-primary {
   margin: 0 auto;
   vertical-align: middle;
   margin-bottom: 1.2em; }
+
+.wpcf7-form p {
+  font-family: "Garamond", serif;
+  color: #3d484f; }
+
+.wpcf7-form input,
+.wpcf7-form textarea {
+  border: solid 1px #b2b4b8;
+  border-radius: 5px; }
+
+.wpcf7-submit {
+  background-color: rgba(48, 67, 105, 0);
+  color: #304369;
+  border: solid 2px #304369;
+  width: 200px; }
+  .wpcf7-submit:hover, .wpcf7-submit:focus {
+    background-color: #304369;
+    color: #ffffff; }
+
+.footer-social-icons {
+  list-style: none;
+  padding: 0; }
+  .footer-social-icons li {
+    display: inline-block;
+    padding-right: 0.5em; }

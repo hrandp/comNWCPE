@@ -279,7 +279,7 @@ a.permalink-custom {
 @include breakpoint(desktop){
 	.blog-excerpt-bg-height {
 		height: 360px;
-		width: 65%;
+		width: 75%;
 	}
 }
 @include breakpoint(tablet){
@@ -626,7 +626,8 @@ p.slider-paragraph{
 .line-blue,
 .line-gray-full-width,
 .line-gray-full-width-single,
-.line-gray-full-width-footer {
+.line-gray-full-width-footer,
+.line-gray-full-width-single-light {
 	border-bottom: solid 1px;
 	margin: 0 auto;
 }
@@ -649,6 +650,9 @@ p.slider-paragraph{
 }
 .line-gray-full-width {
 	display: none;
+}
+.line-gray-full-width-single-light {
+	border-bottom-color: lighten($lightGray, 25%);
 }
 @include breakpoint(phablet) {
 		.line-gray,
@@ -712,7 +716,9 @@ p.slider-paragraph{
 	}
 }
 .space-lg-top-footer {
-	padding-top: 4em;
+	    padding-top: 4em;
+	    left: 10px;
+	    position: relative;
 }
 .space {
 	padding-top: 0em;
@@ -980,7 +986,7 @@ button.btn.btn-large.btn-primary {
 }
 @include breakpoint(laptop){
 	#wrapper-header {
-		height: 450px;
+		height: 500px;
 	}
 	#wrapper-header-workshop {
 		height: 454px;
@@ -1034,4 +1040,40 @@ button.btn.btn-large.btn-primary {
 	margin: 0 auto;
 	vertical-align: middle;
 	margin-bottom: 1.2em;
+}
+
+//forms 
+
+.wpcf7-form {
+	p {
+		font-family: $garamound;
+		color: $darkGray;
+	}
+
+	input,
+	textarea {
+		border: solid 1px $lightGray;
+		border-radius: 5px;
+	}
+}
+.wpcf7-submit {
+		background-color: rgba($darkBlue, 0);
+		color: $darkBlue;
+		border: solid 2px $darkBlue;
+		width: 200px;
+
+		&:hover,
+		&:focus {
+			background-color: $darkBlue;
+			color: $white;
+		}
+}
+.footer-social-icons {
+	list-style: none;
+	padding: 0;
+
+	li {
+		display: inline-block;
+		padding-right: 0.5em;
+	}
 }
