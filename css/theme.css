@@ -7941,12 +7941,15 @@ button.btn.btn-large.btn-primary {
   vertical-align: middle;
   margin-bottom: 1.2em; }
 
-.wpcf7-form p {
+.wpcf7-form p,
+.woocommerce-billing-fields p {
   font-family: "Garamond", serif;
   color: #3d484f; }
 
 .wpcf7-form input,
-.wpcf7-form textarea {
+.wpcf7-form textarea,
+.woocommerce-billing-fields input,
+.woocommerce-billing-fields textarea {
   border: solid 1px #b2b4b8;
   border-radius: 5px; }
 
@@ -7965,3 +7968,17 @@ button.btn.btn-large.btn-primary {
   .footer-social-icons li {
     display: inline-block;
     padding-right: 0.5em; }
+
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt, .woocommerce button.button.alt,
+.woocommerce input.button.alt {
+  background-color: #304369;
+  border: solid 2px #304369; }
+  .woocommerce #respond input#submit.alt:hover, .woocommerce #respond input#submit.alt:focus,
+  .woocommerce a.button.alt:hover,
+  .woocommerce a.button.alt:focus, .woocommerce button.button.alt:hover, .woocommerce button.button.alt:focus,
+  .woocommerce input.button.alt:hover,
+  .woocommerce input.button.alt:focus {
+    background-color: #ffffff;
+    border-color: #304369;
+    color: #304369; }

@@ -1044,7 +1044,8 @@ button.btn.btn-large.btn-primary {
 
 //forms 
 
-.wpcf7-form {
+.wpcf7-form,
+.woocommerce-billing-fields {
 	p {
 		font-family: $garamound;
 		color: $darkGray;
@@ -1075,5 +1076,26 @@ button.btn.btn-large.btn-primary {
 	li {
 		display: inline-block;
 		padding-right: 0.5em;
+	}
+}
+
+//Checkout
+.wc-proceed-to-checkout {
+	a {
+
+	}
+}
+
+.woocommerce #respond input#submit.alt, 
+.woocommerce a.button.alt, .woocommerce button.button.alt, 
+.woocommerce input.button.alt {
+	background-color: $darkBlue;
+	border: solid 2px $darkBlue;
+
+	&:hover,
+	&:focus {
+		background-color: $white;
+		border-color: $darkBlue;
+		color: $darkBlue;
 	}
 }
