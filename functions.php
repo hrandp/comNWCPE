@@ -59,6 +59,72 @@ add_theme_support( 'custom-header', $defaults );
 function redirect_to_checkout() {
     return WC()->cart->get_checkout_url();
 }
+
+//JSON import
+add_action( 'wp_ajax_import_developer', 'import_developer');
+add_action( 'wp_ajax_nopriv_import_developer', 'import_developer');
+
+function import_developer() {
+	$developer_data = json_decode(file_get_contents( 'php://input' ) );
+
+	if (compare_keys() ) {
+		insert_or_update( $developer_data );
+	}
+
+	wp_die();
+}
+
+function insert_or_update($developer_data) {
+
+	//Does Developer_data contain data
+	if ( ! $developer_data ) {
+		return false;
+	}
+
+	//Prepare arguments to return record or no records
+	$args = array(
+		'meta_query' => array(
+			array(
+				'key' => 'developer_id',
+				'value' => $developer_data->id
+				)
+			),
+		'post_type' => 'developer',
+		'post_status' => array('published', 'draft', 'auto-draft', 'future', 'private', 'inherit'),
+		'posts_per_page' => 1
+
+		);
+
+	$developer = get_posts( $arg );
+
+	$developer_id = '';
+
+	if ( $developer ) {
+		$developer_id = $developer[0]->ID;
+	}
+
+	$developer_post = array(
+		'ID' 			=> $developer_id,
+		'post_title' 	=> $developer_data->full_name,
+		'post_content' 	=> $developer_data->bio,
+		'post_type'		=> 'developer',
+		'post_status'	=> ( $developer ) ? $developer[0]->post_status : 'publish'
+	);
+
+	$developer_id = wp_insert_post( $developer_post );
+
+	if ( $developer_id ) {
+		update_post_meta( $developer_id, 'developer_id', $developer_data->id);
+
+		update_post_meta( $developer_id, $developer_data->tags, 'developer_tag' );
+
+		wp_set_object_terms( $developer_id, $developer_data->tags, 'developer_tag' );
+	}
+
+	print_r( $developer_id );
+}
+
+
 /**
  * Change the Shop archive page title.
  * @param  string $title

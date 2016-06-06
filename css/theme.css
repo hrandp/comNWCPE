@@ -7679,8 +7679,8 @@ p.slider-paragraph {
 
 .space-lg-top-footer {
   padding-top: 4em;
-  left: 10px;
-  position: relative; }
+  position: relative;
+  z-index: -1; }
 
 .space {
   padding-top: 0em;
